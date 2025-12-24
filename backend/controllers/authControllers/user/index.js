@@ -31,7 +31,7 @@ exports.create = async (req, res) => {
       const hash = bcrypt.hashSync(password, salt);
       const result = await userModel.create(id, user_id, hash);
       console.log(result);
-      
+
       if (!result.status) {
          return res.status(500).json({
             status: false,
@@ -101,7 +101,9 @@ exports.handleLogin = async (req, res) => {
          maxAge: 24 * 60 * 60 * 1000,
       });
 
-      return res.status(200).json({ status: true, msg: 'Successfully Login !', data: { role: "super_admin", accessToken, refreshToken } });
+      return res
+         .status(200)
+         .json({ status: true, msg: 'Successfully Login !', data: { role: 'super_admin', accessToken, refreshToken } });
    } catch (err) {
       console.error('Login Error:', err.message);
       return res.status(500).json({

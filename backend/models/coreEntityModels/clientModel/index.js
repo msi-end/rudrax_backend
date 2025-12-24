@@ -39,17 +39,17 @@ class ClientModel {
       }
    }
 
-   static async getFinancesByProjectRef(projectRefNo) {
-      if (!projectRefNo) {
+   static async getFinancesByProjectRef(pro_id) {
+      if (!pro_id) {
          throw new Error('Project Reference Number is required.');
       }
       const collectionQuery = 'SELECT * FROM collections WHERE col_project_id = ?';
-      const expenseQuery = 'SELECT * FROM expenses WHERE exp_project_ref = ?';
+      const expenseQuery = 'SELECT * FROM expenses WHERE exp_project_id = ?';
       const connPool = await pool.getConnection();
 
       try {
-         const [collections] = await connPool.query(collectionQuery, [projectRefNo]);
-         const [expenses] = await connPool.query(expenseQuery, [projectRefNo]);
+         const [collections] = await connPool.query(collectionQuery, [pro_id]);
+         const [expenses] = await connPool.query(expenseQuery, [pro_id]);
          return {
             collections: collections,
             expenses: expenses,

@@ -37,16 +37,16 @@ class ClientsCoreController {
    }
 
    static async getProject_Col_Exp(req, res) {
-      const { pro_ref_id } = req.query;
-      if (!pro_ref_id) {
+      const { pro_id } = req.query;
+      if (!pro_id) {
          return res.status(400).send({
             status: false,
-            msg: 'Missing required field: pro_ref_id',
+            msg: 'Missing required field: pro_id',
             data: null,
          });
       }
       try {
-         const financeData = await ClientsModel.getFinancesByProjectRef(pro_ref_id);
+         const financeData = await ClientsModel.getFinancesByProjectRef(pro_id);
          return res.status(200).send({
             status: true,
             msg: 'Project finances retrieved successfully.',

@@ -5,13 +5,17 @@ meta {
 }
 
 get {
-  url: {{URL.Core}}client/get_ProjectInfo
-  body: json
+  url: {{URL.Core}}client/get_ProjectInfo?pro_id=18
+  body: none
   auth: none
+}
+
+params:query {
+  pro_id: 18
 }
 
 body:json {
   {
-    "pro_ref_id":"JGCP0005"
+    "pro_id":"18"
   }
 }

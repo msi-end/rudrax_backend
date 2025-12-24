@@ -2,6 +2,7 @@
 .env.development
 .env.production
 ../frontend
+../rudrax_expo
 /logs/** 
 /public
 /src/logs/req_logs/req_logs.txt
