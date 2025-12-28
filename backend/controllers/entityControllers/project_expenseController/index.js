@@ -1,4 +1,4 @@
-const expenseModel = require('@/models/entityModels/expenseModel');
+const expenseModel = require('@/models/entityModels/project_expenseModel');
 
 class ExpenseController {
    // Fetch all expenses
@@ -40,6 +40,8 @@ class ExpenseController {
          exp_paid_by,
          exp_date,
          exp_category,
+         exp_project_id,
+         exp_project_phase,
       } = req.body;
 
       if (!exp_type || !exp_amount || !exp_mode || !exp_date) {
@@ -57,7 +59,9 @@ class ExpenseController {
             exp_remark,
             exp_paid_by,
             exp_date,
-            exp_category
+            exp_category,
+            exp_project_id,
+            exp_project_phase
          );
          return res.status(201).send({
             status: true,
@@ -74,6 +78,8 @@ class ExpenseController {
                exp_paid_by,
                exp_date,
                exp_category,
+               exp_project_id,
+               exp_project_phase,
             },
          });
       } catch (error) {
@@ -96,6 +102,8 @@ class ExpenseController {
          exp_paid_by,
          exp_date,
          exp_category,
+         exp_project_id,
+         exp_project_phase,
       } = req.body;
 
       if (!exp_id || !exp_type || !exp_name || !exp_amount || !exp_mode || !exp_date) {
@@ -114,7 +122,9 @@ class ExpenseController {
             exp_remark,
             exp_paid_by,
             exp_date,
-            exp_category
+            exp_category,
+            exp_project_id,
+            exp_project_phase
          );
 
          if (!result.status) {
@@ -138,6 +148,8 @@ class ExpenseController {
                   exp_paid_by,
                   exp_date,
                   exp_category,
+                  exp_project_id,
+                  exp_project_phase,
                },
             });
       } catch (error) {

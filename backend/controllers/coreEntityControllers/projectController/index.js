@@ -3,9 +3,9 @@ const projectCoreModel = require('@/models/coreEntityModels/projectModel');
 class projectCoreController {
    static async getFullProject_OtherDetails_(req, res) {
       const { pro_id } = req.params;
-
       try {
          const rawData = await projectCoreModel.getProjectDetails(pro_id);
+
          const structuredData = {
             contractors:
                rawData[0]?.map((contractor) => ({
@@ -63,6 +63,7 @@ class projectCoreController {
                }, []) || [],
             documents: rawData[2],
             client: rawData[3],
+            project_status: rawData.prject_status,
          };
 
          res.status(200).send({

@@ -5,7 +5,23 @@ meta {
 }
 
 get {
-  url: {{URL.Entity}}collection/readAll
+  url: {{URL.Entity}}collection/readAll?getBy_pro_id=16
   body: none
   auth: none
+}
+
+params:query {
+  getBy_pro_id: 16
+}
+
+docs {
+  
+    ### Query Params
+    __________________
+    **from_date** - `string` -		The start date for filtering collections.  
+    **to_date** - `string` - 	The end date for filtering collections.  
+    **getBy_pro_id** -	`integer/string` -		Filter collections by a specific Project ID.  
+    **showListView** -	`boolean/string` -	If "true", returns raw data. If "false" returns data grouped by phase.   
+    
+  
 }

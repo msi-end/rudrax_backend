@@ -101,7 +101,52 @@ class ProjectModel {
 
    static async findAll() {
       const connPool = await pool.getConnection();
-      const selectSQL = `SELECT * FROM projects;`;
+      // const selectSQL = `SELECT * FROM projects ORDER BY pro_id DESC;`;
+      const selectSQL = `SELECT
+p.pro_id,
+p.pro_client_r_id,
+p.pro_name,
+p.pro_ref_no,
+p.pro_sitedesc,
+p.pro_type,
+p.pro_worktype,
+p.pro_category,
+p.pro_sitelocation,
+p.pro_sitearea,
+p.pro_sitedirection,
+p.pro_duration,
+p.pro_recs_space,
+p.pro_recs_smention,
+p.pro_totalcost,
+p.pro_advancepayment,
+p.pro_own,
+p.created_at,
+p.updated_at,
+
+COUNT(DISTINCT pt.pt_id) AS total_tasks,
+SUM(CASE WHEN pt.pt_status = 'completed' THEN 1 ELSE 0 END) AS completed_tasks,
+
+COUNT(DISTINCT pp.pro_phase_id) AS total_phases,
+SUM(CASE WHEN pp.pro_phase_status = 'completed' THEN 1 ELSE 0 END) AS completed_phases,
+
+ROUND(
+CASE
+WHEN COUNT(DISTINCT pt.pt_id) > 0 THEN
+(SUM(CASE WHEN pt.pt_status = 'completed' THEN 1 ELSE 0 END) / COUNT(DISTINCT pt.pt_id)) * 100
+WHEN COUNT(DISTINCT pp.pro_phase_id) > 0 THEN
+(SUM(CASE WHEN pp.pro_phase_status = 'completed' THEN 1 ELSE 0 END) / COUNT(DISTINCT pp.pro_phase_id)) * 100
+ELSE 0
+END
+, 2) AS completion_percentage
+FROM projects p
+LEFT JOIN project_phase pp
+ON pp.pro_id = p.pro_id
+LEFT JOIN project_phase_task pt
+ON pt.pro_id = p.pro_id
+
+GROUP BY p.pro_id
+ORDER BY p.created_at DESC;`;
+
       try {
          const [rows] = await connPool.query(selectSQL);
          return rows;

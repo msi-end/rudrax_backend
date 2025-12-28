@@ -1,0 +1,29 @@
+meta {
+  name: update
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{URL.Entity}}project_expense/update
+  body: json
+  auth: none
+}
+
+body:json {
+    {
+        "exp_id": 42,
+        "exp_type": "project",
+        "exp_name": "Cement Purchase",
+        "exp_amount": "15000",
+        "exp_mode": "cash",
+        "exp_status": "paid",
+        "exp_attachment_url": "/uploads/receipts/cement-bill.jpg",
+        "exp_remark": "Purchased 100 bags of cement",
+        "exp_paid_by": "Site Supervisor",
+        "exp_date": "2025-07-15",
+        "exp_category": "Material42",
+        "exp_project_id": 101,
+       "exp_project_phase":"Material42",
+      }
+}

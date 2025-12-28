@@ -1,0 +1,17 @@
+meta {
+  name: readOne
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{URL.Entity}}project_expense/readOne
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+  "exp_id":44
+  }
+}

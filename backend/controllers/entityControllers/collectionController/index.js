@@ -1,14 +1,25 @@
 const collectionModel = require('@/models/entityModels/collectionModel');
+const organizeByPhase = require('@/utils/functions/collectionOrganizer');
 
 class CollectionController {
    // Fetch all collections
    static async findAll(req, res) {
+      const { from_date, to_date, getBy_pro_id, showListView } = req.query;
       try {
-         const collections = await collectionModel.findAll();
-         return res.status(200).send({ status: true, msg: 'Collections retrieved successfully', data: collections });
+         const collections = await collectionModel.findAll(from_date, to_date, getBy_pro_id);
+         const organizedData = showListView === 'true' ? collections : await organizeByPhase(collections);
+         return res.status(200).send({
+            status: true,
+            msg: 'Collections retrieved successfully',
+            data: organizedData,
+         });
       } catch (error) {
          console.error('Error fetching collections:', error);
-         return res.status(500).send({ status: false, msg: 'Internal Server Error', data: null });
+         return res.status(500).send({
+            status: false,
+            msg: 'Internal Server Error',
+            data: null,
+         });
       }
    }
 
