@@ -5,19 +5,17 @@ meta {
 }
 
 get {
-  url: {{URL.Entity}}query/readOne
+  url: {{URL.Entity}}query/readOne?q_id=5
   body: json
   auth: bearer
 }
 
-auth:bearer {
-  token: <your_token_here>
+params:query {
+  q_id: 5
 }
 
-body:json {
-  {
-      "q_id": 3
-  }
+auth:bearer {
+  token: <your_token_here>
 }
 
 assert {

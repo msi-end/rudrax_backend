@@ -21,7 +21,7 @@ class ProjectSiteQueryController {
 
    static async findOne(req, res) {
       try {
-         const { q_id } = req.body;
+         const { q_id } = req.query;
          const query = await ProjectSiteQueryModel.findById(q_id);
          if (!query) {
             return res.status(404).send({
@@ -148,8 +148,8 @@ class ProjectSiteQueryController {
 
    static async remove(req, res) {
       try {
-         const { q_id } = req.body;
-         const result = await ProjectSiteQueryModel.remove(q_id);
+         const { id } = req.body;
+         const result = await ProjectSiteQueryModel.remove(id);
 
          if (!result?.status) {
             return res.status(404).send({
@@ -161,7 +161,7 @@ class ProjectSiteQueryController {
          res.status(200).send({
             status: true,
             msg: 'Query deleted successfully',
-            data: { q_id },
+            data: { q_id: id },
          });
       } catch (error) {
          console.error(error);
