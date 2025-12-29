@@ -1,0 +1,17 @@
+meta {
+  name: delete
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{URL.Entity}}query_emp/remove
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "qemp_id": "8"
+  }
+}

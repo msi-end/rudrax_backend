@@ -1,0 +1,17 @@
+meta {
+  name: readOne
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{URL.Entity}}site_inspection_emp/readOne
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "siemp_id": "8"
+  }
+}

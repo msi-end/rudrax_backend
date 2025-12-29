@@ -1,0 +1,17 @@
+meta {
+  name: getAllByPhaseTask
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{URL.Core}}project_task_emp/getAllByPhaseTask
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+  "phase_task_id":8
+  }
+}

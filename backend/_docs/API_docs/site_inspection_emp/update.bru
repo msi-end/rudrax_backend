@@ -1,0 +1,21 @@
+meta {
+  name: update
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{URL.Entity}}site_inspection_emp/update
+  body: json
+  auth: none
+}
+
+body:json {
+   {
+        "siemp_id": 17,
+        "siemp_user_id": "3",
+        "siemp_siteInspection_id": 10,
+        "siemp_assigned_by": "AdminUsdser",
+        "siemp_status": "Completed"
+      }
+}

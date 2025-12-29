@@ -1,0 +1,18 @@
+meta {
+  name: readAll
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{URL.Entity}}site_inspection_emp/readAll
+  body: none
+  auth: none
+}
+
+body:json {
+  {
+    "sub_phase_name":"Phase 1",
+    "sub_phase_alt_name":"sub_phase_alt_name 1"
+  }
+}

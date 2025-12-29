@@ -1,0 +1,17 @@
+meta {
+  name: getAllByUser
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{URL.Core}}project_task_emp/getAllByUser
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+   "user_id": 3
+  }
+}

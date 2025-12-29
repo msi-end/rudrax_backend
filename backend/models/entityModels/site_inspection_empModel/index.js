@@ -1,8 +1,8 @@
 const pool = require('@/config/dbConfig');
 
-class ProjectEmployeeModel {
+class SiteInspectionEmployeeModel {
    static async findAll() {
-      const query = 'SELECT * FROM query_emp';
+      const query = 'SELECT * FROM site_inspection_emp';
       const conn = await pool.getConnection();
       try {
          const [rows] = await conn.query(query);
@@ -15,14 +15,14 @@ class ProjectEmployeeModel {
       }
    }
 
-   static async findOne(qemp_id) {
-      const query = 'SELECT * FROM query_emp WHERE qemp_id = ?';
+   static async findOne(siemp_id) {
+      const query = 'SELECT * FROM site_inspection_emp WHERE siemp_id = ?';
       const conn = await pool.getConnection();
       try {
-         const [rows] = await conn.query(query, [qemp_id]);
+         const [rows] = await conn.query(query, [siemp_id]);
          return rows[0];
       } catch (error) {
-         console.error(`Error fetching project employee by ID ${qemp_id}:`, error);
+         console.error(`Error fetching project employee by ID ${siemp_id}:`, error);
          throw error;
       } finally {
          conn.release();
@@ -31,26 +31,26 @@ class ProjectEmployeeModel {
 
    static async create(data) {
       const query = `
-         INSERT INTO query_emp 
-         (qemp_pt_id, qemp_user_id, qemp_assigned_by, qemp_status) 
+         INSERT INTO site_inspection_emp 
+         ( siemp_user_id,siemp_siteInspection_id, siemp_assigned_by, siemp_status) 
          VALUES (?, ?, ?, ?)`;
       const conn = await pool.getConnection();
       try {
          const [result] = await conn.query(query, [
-            data.qemp_pt_id,
-            data.qemp_user_id,
-            data.qemp_assigned_by,
-            data.qemp_status,
+            data.siemp_user_id,
+            data.siemp_siteInspection_id,
+            data.siemp_assigned_by,
+            data.siemp_status,
          ]);
          if (result.affectedRows > 0) {
             return {
                status: result.affectedRows > 0,
                data: {
-                  qemp_id: result.insertId,
-                  qemp_pt_id: data.qemp_pt_id,
-                  qemp_user_id: data.qemp_user_id,
-                  qemp_assigned_by: data.qemp_assigned_by,
-                  qemp_status: data.qemp_status,
+                  siemp_id: result.insertId,
+                  siemp_user_id: data.siemp_user_id,
+                  siemp_siteInspection_id: data.siemp_siteInspection_id,
+                  siemp_assigned_by: data.siemp_assigned_by,
+                  siemp_status: data.siemp_status,
                },
             };
          } else {
@@ -64,44 +64,44 @@ class ProjectEmployeeModel {
       }
    }
 
-   static async update(qemp_id, data) {
+   static async update(siemp_id, data) {
       const query = `
-         UPDATE query_emp 
-         SET qemp_pt_id = ?, qemp_user_id = ?, qemp_assigned_date = ?, qemp_assigned_by = ?, qemp_status = ?
-         WHERE qemp_id = ?`;
+         UPDATE site_inspection_emp 
+         SET siemp_user_id = ?,siemp_siteInspection_id=?, siemp_assigned_date = ?, siemp_assigned_by = ?, siemp_status = ?
+         WHERE siemp_id = ?`;
       const conn = await pool.getConnection();
       try {
          const [result] = await conn.query(query, [
-            data.qemp_pt_id,
-            data.qemp_user_id,
-            data.qemp_assigned_date,
-            data.qemp_assigned_by,
-            data.qemp_status,
-            qemp_id,
+            data.siemp_user_id,
+            data.siemp_siteInspection_id,
+            data.siemp_assigned_date,
+            data.siemp_assigned_by,
+            data.siemp_status,
+            siemp_id,
          ]);
          return {
             status: result.affectedRows > 0,
             msg: result.affectedRows > 0 ? 'Project employee updated.' : 'Update failed.',
          };
       } catch (error) {
-         console.error(`Error updating project employee with ID ${qemp_id}:`, error);
+         console.error(`Error updating project employee with ID ${siemp_id}:`, error);
          throw error;
       } finally {
          conn.release();
       }
    }
 
-   static async remove(qemp_id) {
-      const query = 'DELETE FROM query_emp WHERE qemp_id = ?';
+   static async remove(siemp_id) {
+      const query = 'DELETE FROM site_inspection_emp WHERE siemp_id = ?';
       const conn = await pool.getConnection();
       try {
-         const [result] = await conn.query(query, [qemp_id]);
+         const [result] = await conn.query(query, [siemp_id]);
          return {
             status: result.affectedRows > 0,
             msg: result.affectedRows > 0 ? 'Deleted successfully.' : 'No record deleted.',
          };
       } catch (error) {
-         console.error(`Error deleting project employee with ID ${qemp_id}:`, error);
+         console.error(`Error deleting project employee with ID ${siemp_id}:`, error);
          throw error;
       } finally {
          conn.release();
@@ -109,4 +109,4 @@ class ProjectEmployeeModel {
    }
 }
 
-module.exports = ProjectEmployeeModel;
+module.exports = SiteInspectionEmployeeModel;

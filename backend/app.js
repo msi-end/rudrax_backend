@@ -7,7 +7,7 @@ const cookieParser = require('cookie-parser');
 const path = require('path');
 const cors = require('cors');
 const corsOptions = require('@/config/corsOptions');
-const requestLogger = require('@/utils/req_logger');
+// const requestLogger = require('@/utils/req_logger');
 const { eventlogger } = require('@/middleware/logEvents');
 const credentials = require('@/middleware/credentials');
 const jwt_authenticationVerify = require('@/middleware/verifyJWT');
@@ -31,7 +31,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use(cookieParser());
-app.use(requestLogger);
+// app.use(requestLogger);
 
 const appRoutes_entity = require('@/routers/applicationApi');
 const appRoutes_core = require('@/routers/coreApi');

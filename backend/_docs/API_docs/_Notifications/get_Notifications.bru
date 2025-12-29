@@ -1,0 +1,17 @@
+meta {
+  name: get_Notifications
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{URL.notification}}?unreadOnly=false&limit=20&offset=0
+  body: none
+  auth: none
+}
+
+params:query {
+  unreadOnly: false
+  limit: 20
+  offset: 0
+}

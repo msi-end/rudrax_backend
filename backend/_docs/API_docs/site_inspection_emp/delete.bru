@@ -1,0 +1,17 @@
+meta {
+  name: delete
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{URL.Entity}}site_inspection_emp/remove
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "siemp_id": "8"
+  }
+}

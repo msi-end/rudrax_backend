@@ -2661,3 +2661,567 @@ Error: Unknown database 'rudrax_db'
   ],
   [Symbol(level)]: 'error'
 }
+2025-12-28 19:56:25 [ERROR] unhandledRejection: logger is not defined
+ReferenceError: logger is not defined
+    at getUserNotifications (Z:\Visual_Codes\rudrax\backend\controllers\notification\index.js:24:10)
+    at Layer.handle [as handle_request] (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\layer.js:95:5)
+    at Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:47:12)
+ReferenceError: logger is not defined
+    at getUserNotifications (Z:\Visual_Codes\rudrax\backend\controllers\notification\index.js:24:10)
+    at Layer.handle [as handle_request] (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\layer.js:95:5)
+    at Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:47:12)
+{
+  error: ReferenceError: logger is not defined
+      at getUserNotifications (Z:\Visual_Codes\rudrax\backend\controllers\notification\index.js:24:10)
+      at Layer.handle [as handle_request] (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\layer.js:95:5)
+      at next (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\route.js:149:13)
+      at Route.dispatch (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\route.js:119:3)
+      at Layer.handle [as handle_request] (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\layer.js:95:5)
+      at Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:284:15
+      at Function.process_params (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:346:12)
+      at next (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:280:10)
+      at Function.handle (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:175:3)
+      at router (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:47:12),
+  rejection: true,
+  date: 'Sun Dec 28 2025 19:56:25 GMT+0530 (India Standard Time)',
+  process: {
+    pid: 5380,
+    uid: null,
+    gid: null,
+    cwd: 'Z:\\Visual_Codes\\rudrax\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'Z:\\Visual_Codes\\rudrax\\backend\\app.js'
+    ],
+    memoryUsage: {
+      rss: 53104640,
+      heapTotal: 21938176,
+      heapUsed: 19902240,
+      external: 2337641,
+      arrayBuffers: 18533
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 33773.953 },
+  trace: [
+    {
+      column: 10,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\controllers\\notification\\index.js',
+      function: 'getUserNotifications',
+      line: 24,
+      method: null,
+      native: false
+    },
+    {
+      column: 5,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\layer.js',
+      function: 'Layer.handle [as handle_request]',
+      line: 95,
+      method: 'handle [as handle_request]',
+      native: false
+    },
+    {
+      column: 13,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\route.js',
+      function: 'next',
+      line: 149,
+      method: null,
+      native: false
+    },
+    {
+      column: 3,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\route.js',
+      function: 'Route.dispatch',
+      line: 119,
+      method: 'dispatch',
+      native: false
+    },
+    {
+      column: 5,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\layer.js',
+      function: 'Layer.handle [as handle_request]',
+      line: 95,
+      method: 'handle [as handle_request]',
+      native: false
+    },
+    {
+      column: 15,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\index.js',
+      function: null,
+      line: 284,
+      method: null,
+      native: false
+    },
+    {
+      column: 12,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\index.js',
+      function: 'Function.process_params',
+      line: 346,
+      method: 'process_params',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\index.js',
+      function: 'next',
+      line: 280,
+      method: null,
+      native: false
+    },
+    {
+      column: 3,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\index.js',
+      function: 'Function.handle',
+      line: 175,
+      method: 'handle',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\index.js',
+      function: 'router',
+      line: 47,
+      method: null,
+      native: false
+    }
+  ],
+  [Symbol(level)]: 'error'
+}
+2025-12-28 19:57:09 [ERROR] unhandledRejection: Cannot read properties of undefined (reading 'error')
+TypeError: Cannot read properties of undefined (reading 'error')
+    at getUserNotifications (Z:\Visual_Codes\rudrax\backend\controllers\notification\index.js:24:21)
+    at Layer.handle [as handle_request] (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\layer.js:95:5)
+    at Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:47:12)
+TypeError: Cannot read properties of undefined (reading 'error')
+    at getUserNotifications (Z:\Visual_Codes\rudrax\backend\controllers\notification\index.js:24:21)
+    at Layer.handle [as handle_request] (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\layer.js:95:5)
+    at Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:47:12)
+{
+  error: TypeError: Cannot read properties of undefined (reading 'error')
+      at getUserNotifications (Z:\Visual_Codes\rudrax\backend\controllers\notification\index.js:24:21)
+      at Layer.handle [as handle_request] (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\layer.js:95:5)
+      at next (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\route.js:149:13)
+      at Route.dispatch (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\route.js:119:3)
+      at Layer.handle [as handle_request] (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\layer.js:95:5)
+      at Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:284:15
+      at Function.process_params (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:346:12)
+      at next (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:280:10)
+      at Function.handle (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:175:3)
+      at router (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:47:12),
+  rejection: true,
+  date: 'Sun Dec 28 2025 19:57:09 GMT+0530 (India Standard Time)',
+  process: {
+    pid: 8640,
+    uid: null,
+    gid: null,
+    cwd: 'Z:\\Visual_Codes\\rudrax\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'Z:\\Visual_Codes\\rudrax\\backend\\app.js'
+    ],
+    memoryUsage: {
+      rss: 94990336,
+      heapTotal: 62799872,
+      heapUsed: 40942808,
+      external: 2336779,
+      arrayBuffers: 17671
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 33818.484 },
+  trace: [
+    {
+      column: 21,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\controllers\\notification\\index.js',
+      function: 'getUserNotifications',
+      line: 24,
+      method: null,
+      native: false
+    },
+    {
+      column: 5,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\layer.js',
+      function: 'Layer.handle [as handle_request]',
+      line: 95,
+      method: 'handle [as handle_request]',
+      native: false
+    },
+    {
+      column: 13,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\route.js',
+      function: 'next',
+      line: 149,
+      method: null,
+      native: false
+    },
+    {
+      column: 3,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\route.js',
+      function: 'Route.dispatch',
+      line: 119,
+      method: 'dispatch',
+      native: false
+    },
+    {
+      column: 5,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\layer.js',
+      function: 'Layer.handle [as handle_request]',
+      line: 95,
+      method: 'handle [as handle_request]',
+      native: false
+    },
+    {
+      column: 15,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\index.js',
+      function: null,
+      line: 284,
+      method: null,
+      native: false
+    },
+    {
+      column: 12,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\index.js',
+      function: 'Function.process_params',
+      line: 346,
+      method: 'process_params',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\index.js',
+      function: 'next',
+      line: 280,
+      method: null,
+      native: false
+    },
+    {
+      column: 3,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\index.js',
+      function: 'Function.handle',
+      line: 175,
+      method: 'handle',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\index.js',
+      function: 'router',
+      line: 47,
+      method: null,
+      native: false
+    }
+  ],
+  [Symbol(level)]: 'error'
+}
+2025-12-28 20:00:12 [ERROR] unhandledRejection: err_logger is not a function
+TypeError: err_logger is not a function
+    at getUserNotifications (Z:\Visual_Codes\rudrax\backend\controllers\notification\index.js:24:10)
+    at Layer.handle [as handle_request] (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\layer.js:95:5)
+    at Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:47:12)
+TypeError: err_logger is not a function
+    at getUserNotifications (Z:\Visual_Codes\rudrax\backend\controllers\notification\index.js:24:10)
+    at Layer.handle [as handle_request] (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\layer.js:95:5)
+    at Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:47:12)
+{
+  error: TypeError: err_logger is not a function
+      at getUserNotifications (Z:\Visual_Codes\rudrax\backend\controllers\notification\index.js:24:10)
+      at Layer.handle [as handle_request] (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\layer.js:95:5)
+      at next (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\route.js:149:13)
+      at Route.dispatch (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\route.js:119:3)
+      at Layer.handle [as handle_request] (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\layer.js:95:5)
+      at Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:284:15
+      at Function.process_params (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:346:12)
+      at next (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:280:10)
+      at Function.handle (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:175:3)
+      at router (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:47:12),
+  rejection: true,
+  date: 'Sun Dec 28 2025 20:00:12 GMT+0530 (India Standard Time)',
+  process: {
+    pid: 13616,
+    uid: null,
+    gid: null,
+    cwd: 'Z:\\Visual_Codes\\rudrax\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'Z:\\Visual_Codes\\rudrax\\backend\\app.js'
+    ],
+    memoryUsage: {
+      rss: 94572544,
+      heapTotal: 62070784,
+      heapUsed: 40113592,
+      external: 2336779,
+      arrayBuffers: 17671
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 34001.609 },
+  trace: [
+    {
+      column: 10,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\controllers\\notification\\index.js',
+      function: 'getUserNotifications',
+      line: 24,
+      method: null,
+      native: false
+    },
+    {
+      column: 5,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\layer.js',
+      function: 'Layer.handle [as handle_request]',
+      line: 95,
+      method: 'handle [as handle_request]',
+      native: false
+    },
+    {
+      column: 13,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\route.js',
+      function: 'next',
+      line: 149,
+      method: null,
+      native: false
+    },
+    {
+      column: 3,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\route.js',
+      function: 'Route.dispatch',
+      line: 119,
+      method: 'dispatch',
+      native: false
+    },
+    {
+      column: 5,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\layer.js',
+      function: 'Layer.handle [as handle_request]',
+      line: 95,
+      method: 'handle [as handle_request]',
+      native: false
+    },
+    {
+      column: 15,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\index.js',
+      function: null,
+      line: 284,
+      method: null,
+      native: false
+    },
+    {
+      column: 12,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\index.js',
+      function: 'Function.process_params',
+      line: 346,
+      method: 'process_params',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\index.js',
+      function: 'next',
+      line: 280,
+      method: null,
+      native: false
+    },
+    {
+      column: 3,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\index.js',
+      function: 'Function.handle',
+      line: 175,
+      method: 'handle',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\index.js',
+      function: 'router',
+      line: 47,
+      method: null,
+      native: false
+    }
+  ],
+  [Symbol(level)]: 'error'
+}
+2025-12-28 20:00:56 [ERROR] unhandledRejection: err_logger is not defined
+ReferenceError: err_logger is not defined
+    at getUserNotifications (Z:\Visual_Codes\rudrax\backend\controllers\notification\index.js:23:10)
+    at Layer.handle [as handle_request] (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\layer.js:95:5)
+    at Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:47:12)
+ReferenceError: err_logger is not defined
+    at getUserNotifications (Z:\Visual_Codes\rudrax\backend\controllers\notification\index.js:23:10)
+    at Layer.handle [as handle_request] (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\layer.js:95:5)
+    at Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:47:12)
+{
+  error: ReferenceError: err_logger is not defined
+      at getUserNotifications (Z:\Visual_Codes\rudrax\backend\controllers\notification\index.js:23:10)
+      at Layer.handle [as handle_request] (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\layer.js:95:5)
+      at next (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\route.js:149:13)
+      at Route.dispatch (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\route.js:119:3)
+      at Layer.handle [as handle_request] (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\layer.js:95:5)
+      at Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:284:15
+      at Function.process_params (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:346:12)
+      at next (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:280:10)
+      at Function.handle (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:175:3)
+      at router (Z:\Visual_Codes\rudrax\backend\node_modules\express\lib\router\index.js:47:12),
+  rejection: true,
+  date: 'Sun Dec 28 2025 20:00:56 GMT+0530 (India Standard Time)',
+  process: {
+    pid: 9520,
+    uid: null,
+    gid: null,
+    cwd: 'Z:\\Visual_Codes\\rudrax\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'Z:\\Visual_Codes\\rudrax\\backend\\app.js'
+    ],
+    memoryUsage: {
+      rss: 95002624,
+      heapTotal: 62537728,
+      heapUsed: 40907976,
+      external: 2336779,
+      arrayBuffers: 17671
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 34045 },
+  trace: [
+    {
+      column: 10,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\controllers\\notification\\index.js',
+      function: 'getUserNotifications',
+      line: 23,
+      method: null,
+      native: false
+    },
+    {
+      column: 5,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\layer.js',
+      function: 'Layer.handle [as handle_request]',
+      line: 95,
+      method: 'handle [as handle_request]',
+      native: false
+    },
+    {
+      column: 13,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\route.js',
+      function: 'next',
+      line: 149,
+      method: null,
+      native: false
+    },
+    {
+      column: 3,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\route.js',
+      function: 'Route.dispatch',
+      line: 119,
+      method: 'dispatch',
+      native: false
+    },
+    {
+      column: 5,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\layer.js',
+      function: 'Layer.handle [as handle_request]',
+      line: 95,
+      method: 'handle [as handle_request]',
+      native: false
+    },
+    {
+      column: 15,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\index.js',
+      function: null,
+      line: 284,
+      method: null,
+      native: false
+    },
+    {
+      column: 12,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\index.js',
+      function: 'Function.process_params',
+      line: 346,
+      method: 'process_params',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\index.js',
+      function: 'next',
+      line: 280,
+      method: null,
+      native: false
+    },
+    {
+      column: 3,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\index.js',
+      function: 'Function.handle',
+      line: 175,
+      method: 'handle',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'Z:\\Visual_Codes\\rudrax\\backend\\node_modules\\express\\lib\\router\\index.js',
+      function: 'router',
+      line: 47,
+      method: null,
+      native: false
+    }
+  ],
+  [Symbol(level)]: 'error'
+}

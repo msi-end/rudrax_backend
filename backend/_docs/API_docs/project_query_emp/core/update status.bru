@@ -1,0 +1,18 @@
+meta {
+  name: update status
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL.Core}}project_task_emp/update-status
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "ptemp_id": "8",
+    "ptemp_status": "Completed"
+  }
+}

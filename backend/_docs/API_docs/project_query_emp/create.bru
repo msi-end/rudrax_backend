@@ -1,0 +1,23 @@
+meta {
+  name: create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL.Entity}}query_emp/create
+  body: json
+  auth: none
+}
+
+body:json {
+  [
+    {
+      "qemp_id": "8",
+      "qemp_user_id": "3",
+      "qemp_query_id":6,
+      "qemp_assigned_by": "AdminUser",
+      "qemp_status": "Completed"
+    }
+  ]
+}

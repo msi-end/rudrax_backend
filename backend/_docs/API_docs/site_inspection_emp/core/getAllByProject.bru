@@ -1,0 +1,17 @@
+meta {
+  name: getAllByProject
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{URL.Core}}project_task_emp/getAllByProject
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "project_id": 15
+  }
+}
